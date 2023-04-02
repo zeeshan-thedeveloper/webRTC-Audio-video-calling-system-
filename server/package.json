@@ -1,0 +1,24 @@
+{
+  "name": "webrtc",
+  "version": "1.0.0",
+  "description": "this will be containing backend logic used for implementation of webRTC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeeshan-thedeveloper/webRTC.git"
+  },
+  "author": "zeeshan-thedeveloper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeeshan-thedeveloper/webRTC/issues"
+  },
+  "homepage": "https://github.com/zeeshan-thedeveloper/webRTC#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  }
+}
