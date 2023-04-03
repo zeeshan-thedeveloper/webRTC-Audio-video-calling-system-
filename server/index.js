@@ -31,6 +31,22 @@ io.on("connection", (socket) => {
     });
   });
 
+  socket.on("offer", (data) => {
+    console.log("offer : ",data);
+    io.to(data.recipient).emit("offer", {
+      offer: data.offer,
+      sender: data.sender,
+    });
+  });
+
+  socket.on("answer", (data) => {
+    console.log("answer : ",data);
+    io.to(data.recipient).emit("answer", {
+      answer: data.answer,
+      sender: data.sender,
+    });
+  });
+
   // Handle disconnections
   socket.on("disconnect", () => {
     console.log("A user disconnected");
@@ -50,3 +66,4 @@ io.on("connection", (socket) => {
     io.emit("connectedClients", connectedClients);
   }
 });
+
